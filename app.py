@@ -37,8 +37,7 @@ def build_features(text):
     tfidf_features = tfidf.transform([text])
     text_len = len(text)
     math_cnt = count_math_symbols(text)
-
-  extra_features = np.array([[text_len, math_cnt]], dtype=np.float64)
+    extra_features = np.array([[text_len, math_cnt]], dtype=np.float64)
 
 
     if scaler is not None:
